@@ -25,6 +25,7 @@ const App = () => <div>
         <input type='checkbox' />
         <span>Some text</span>
     </label>
+    <a href='https://www.google.com'>Standard link</a>
 </div>;
 
 export default App;

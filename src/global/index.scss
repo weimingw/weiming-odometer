@@ -39,7 +39,28 @@ html {
 
 .app button, 
 .app input {
-    padding: 0.5 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    background: variables.$color-accent-dark;
+    border-radius: 0.5rem;
+}
+
+.app button:hover,
+.app input[type=button]:hover {
+    background: variables.$color-accent-light;
+}
+
+.app button, .app input[type=button] {
+    border: 0px;
+    cursor: pointer;
+}
+
+.app input[type=checkbox] {
+    height: 1.6rem;
+    width: 1.6rem;
 }
 
 .app h1 {
@@ -68,4 +89,18 @@ html {
 
 .app p {
     font-size: 1.4rem;
+}
+ 
+.app a {
+    text-decoration: none;
+    color: variables.$color-blue;
+}
+
+.app a:hover {
+    color: transparentize(variables.$color-blue, 0.25);
+}
+
+.app label {
+    display: flex;
+    align-items: center;
 }
