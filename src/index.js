@@ -1,12 +1,11 @@
-import React from 'react';
+import 'normalize.css';
 import ReactDOM from 'react-dom';
+import './global/index.scss';
 
 import App from './App';
 
-const title = 'My Minimal React Webpack Babel Setup';
-
 ReactDOM.render(
-  <App title={title} />,
+  <App />,
   document.getElementById('app')
 );
 
