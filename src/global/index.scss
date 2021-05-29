@@ -9,53 +9,63 @@
 html {
     font-family: variables.$base-font-family;
     font-size: variables.$base-font-size;
+    color: variables.$color-dark;
 }
 
-html {
-    font-size: 10px;
-    color: variables.$dark;
-    background: variables.$light;
-}
-
-#app {
+.app {
     font-size: 1.4rem;
     line-height: 2em;
 }
 
-html h1, 
-html h2, 
-html h3, 
-html h4, 
-html h5, 
-html h6, 
-html p {
+.app h1, 
+.app h2, 
+.app h3, 
+.app h4, 
+.app h5, 
+.app h6, 
+.app p {
     margin: 0;
 }
 
-html h1 {
+.app h1, 
+.app h2, 
+.app h3, 
+.app h4, 
+.app h5, 
+.app h6, 
+.app p {
+    padding: 0 1rem;
+}
+
+.app button, 
+.app input {
+    padding: 0.5 1rem;
+}
+
+.app h1 {
     font-size: 2.4rem;
 }
 
-html h2 {
+.app h2 {
     font-size: 2.2rem;
 }
 
-html h3 {
+.app h3 {
     font-size: 2.0rem;
 }
 
-html h4 {
+.app h4 {
     font-size: 1.8rem;
 }
 
-html h5 {
+.app h5 {
     font-size: 1.6rem;
 }
 
-html h6 {
+.app h6 {
     font-size: 1.4rem;
 }
 
-html p {
+.app p {
     font-size: 1.4rem;
 }
