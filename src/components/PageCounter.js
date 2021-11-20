@@ -6,8 +6,8 @@ export default function PageCounter(props) {
     const [target, setTarget] = useState(1);
 
     useEffect(() => {
-        setStart(target);
-        setTarget(props.value);
+        setStart(parseInt(target));
+        setTarget(parseInt(props.value));
     }, [props.value]);
 
     function getDirection() {
@@ -71,10 +71,10 @@ function RollingNumber(props) {
 
     useEffect(() => {
         const startTime = new Date();
-        const startPosition = getStartPosition();
+        const startPosition = roundNumber(getStartPosition(), 3);
         const movement = getMovement(startPosition);
 
-        // do adjustment here
+        console.log(startPosition, movement + startPosition);
 
         function tick() {
             const elapsed = new Date() - startTime;
