@@ -1,0 +1,33 @@
+.page-counter-numerator {
+    display: flex;
+}
+
+.rolling-number-window {
+    position: relative;
+}
+
+.rolling-number {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+}
+
+.rolling-number-placeholder {
+    width: 0.9rem;
+    height: 2em;
+}
+
+.page-counter-numerator {
+    display: flex;
+}
+
+.rolling-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.rolling-number {
+    width: 0.9rem;
+    line-height: 2em;
+}
