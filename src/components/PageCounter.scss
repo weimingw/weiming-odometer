@@ -11,6 +11,11 @@
     flex-direction: column;
     position: absolute;
     top: 0;
+    transition: 1s transform;
+}
+
+.rolling-number.no-animation {
+    transition: none;
 }
 
 .rolling-number-placeholder {

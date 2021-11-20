@@ -49,10 +49,19 @@ function RollingNumber(props) {
         return NUMS.map((n, i) => <span key={i}>{n}</span>);
     }
 
+    function getNewPosition() {
+        if (direction > 0) {
+            return `${target * -2}em`;
+        } else {
+            return `${target * 2}em`;
+        }
+    }
+
     return (
         <div class="rolling-number-window">
             <div class="rolling-number-placeholder"></div>
-            <div class="rolling-number">{renderNumbers()}</div>
+            <div class="rolling-number" style={{ transform: `translateY(${getNewPosition()})` }}>{renderNumbers()}</div>
+            <div style={{ transform: 'translateX(20em)' }}>{target}</div>
         </div>
     );
 }

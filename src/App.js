@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PageCounter from './components/PageCounter';
 
 const App = () => {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(12);
     const [counterValue, setCounterValue] = useState(0);
 
     function applyValue() {
@@ -12,12 +12,13 @@ const App = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
             <input
+                style={{ zIndex: 1 }}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 type="number"
             />
-            <button onClick={applyValue}>Click to Change</button>
-            <PageCounter value={counterValue} />
+            <button style={{ zIndex: 1 }} onClick={applyValue}>Click to Change</button>
+            <PageCounter value={value} />
         </div>
     );
 };
