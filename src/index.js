@@ -6,7 +6,7 @@ import App from './App';
 
 ReactDOM.render(
   <App />,
-  document.querySelector('.app')
+  document.querySelector('body')
 );
 
 module.hot.accept();

@@ -127,6 +127,9 @@ function RollingNumber(props) {
         tick();
     }, [direction, target]);
 
+    /** 
+     * Display a column of numbers, 0 to 9, twice
+     */
     function renderNumbers() {
         return NUMS.map((n, i) => <span key={i}>{n}</span>);
     }
@@ -136,10 +139,10 @@ function RollingNumber(props) {
     }
 
     return (
-        <div class="rolling-number-window">
-            <div class="rolling-number-placeholder"></div>
+        <div className="rolling-number-window">
+            <div className="rolling-number-placeholder"></div>
             <div
-                class="rolling-number"
+                className="rolling-number"
                 style={{
                     transform: `translateY(${currentPosition}em)`,
                 }}

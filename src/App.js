@@ -1,23 +1,39 @@
 import { useState } from 'react';
-import PageCounter from './components/PageCounter';
+import PageCounter from './components/pagecounter/PageCounter';
+import Odometer from './components/odometer/Odometer';
+import ExposedOdometer from './components/exposedodometer/ExposedOdometer';
 
+import './App.scss';
+
+const NUMS = new Array(100).fill(true).map((c, i) => i);
 const App = () => {
-    const [value, setValue] = useState(12);
+    const [value, setValue] = useState(0);
 
-    function applyValue() {
-        setCounterValue(value);
+    function renderSections() {
+        return NUMS.map((n) => <div className="section">{n}</div>);
+    }
+
+    function onScroll(e) {
+        setValue(Math.floor(e.target.scrollTop / NUMS.length));
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input
-                style={{ zIndex: 1 }}
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                type="number"
-            />
-            <button style={{ zIndex: 1 }} onClick={applyValue}>Click to Change</button>
-            <PageCounter value={value} maxValue={99} />
+        <div className="app" onScroll={onScroll}>
+            <div className="odometers">
+                <div className="odometer-item">
+                    <h3>Base Odometer</h3>
+                    <Odometer value={value} maxValue={99} />
+                </div>
+                <div className="odometer-item">
+                    <h3>Under The Hood</h3>
+                    <ExposedOdometer value={value} maxValue={99} />
+                </div>
+                <div className="odometer-item">
+                    <h3>Sample Usage</h3>
+                    <PageCounter value={value} maxValue={99} />
+                </div>
+            </div>
+            <div className="sections">{renderSections()}</div>
         </div>
     );
 };
