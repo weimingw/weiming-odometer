@@ -19,18 +19,21 @@ const App = () => {
 
     return (
         <div className="app" onScroll={onScroll}>
-            <div className="odometers">
-                <div className="odometer-item">
-                    <h3>Base Odometer</h3>
-                    <Odometer value={value} maxValue={99} />
-                </div>
-                <div className="odometer-item">
-                    <h3>Under The Hood</h3>
-                    <ExposedOdometer value={value} maxValue={99} />
-                </div>
-                <div className="odometer-item">
-                    <h3>Sample Usage</h3>
-                    <PageCounter value={value} maxValue={99} />
+            <div className="foreground">
+                <h3>Scroll this page!</h3>
+                <div className="odometers">
+                    <div className="odometer-item">
+                        <h4>Base Odometer</h4>
+                        <Odometer value={value} maxValue={99} />
+                    </div>
+                    <div className="odometer-item">
+                        <h4>Under The Hood</h4>
+                        <ExposedOdometer value={value} maxValue={99} />
+                    </div>
+                    <div className="odometer-item">
+                        <h4>Sample Usage</h4>
+                        <PageCounter value={value} maxValue={99} />
+                    </div>
                 </div>
             </div>
             <div className="sections">{renderSections()}</div>

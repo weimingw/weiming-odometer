@@ -8,11 +8,19 @@
     position: relative;
 }
 
+.foreground {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    pointer-events: none;
+}
+
+.foreground h3 {
+    margin-bottom: 2rem;
+}
+
 .odometers {
     display: flex;
-    position: fixed;
-    top: 50%;
-    left: 30%;
 }
 
 .odometer-item {
