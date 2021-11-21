@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PageCounter from './components/pagecounter/PageCounter';
 import Odometer from './components/odometer/Odometer';
 import ExposedOdometer from './components/exposedodometer/ExposedOdometer';
 
@@ -21,18 +20,16 @@ const App = () => {
         <div className="app" onScroll={onScroll}>
             <div className="foreground">
                 <h3>Scroll this page!</h3>
+                <p>The odometer value will change</p>
+                <p>as you scroll.</p>
                 <div className="odometers">
                     <div className="odometer-item">
-                        <h4>Base Odometer</h4>
+                        <h4>Component</h4>
                         <Odometer value={value} maxValue={99} />
                     </div>
                     <div className="odometer-item">
                         <h4>Under The Hood</h4>
                         <ExposedOdometer value={value} maxValue={99} />
-                    </div>
-                    <div className="odometer-item">
-                        <h4>Sample Usage</h4>
-                        <PageCounter value={value} maxValue={99} />
                     </div>
                 </div>
             </div>

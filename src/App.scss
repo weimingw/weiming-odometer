@@ -10,21 +10,18 @@
 
 .foreground {
     position: fixed;
-    top: 40%;
+    top: 35%;
     left: 30%;
     pointer-events: none;
 }
 
-.foreground h3 {
-    margin-bottom: 2rem;
-}
-
 .odometers {
     display: flex;
+    margin-top: 2rem;
 }
 
 .odometer-item {
-    margin-right: 3rem;
+    margin-right: 12rem;
 }
 
 .section {
