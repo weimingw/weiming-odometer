@@ -1,0 +1,27 @@
+.odometer {
+    display: flex;
+    align-items: center;
+}
+
+.rolling-number-window {
+    position: relative;
+    overflow-y: hidden;
+}
+
+.rolling-number {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+}
+
+.rolling-number,
+.rolling-number-placeholder {
+    width: 0.9rem;
+    height: 2em;
+}
+
+.rolling-number {
+    display: flex;
+    flex-direction: column;
+}

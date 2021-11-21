@@ -1,38 +1,16 @@
-.page-counter-numerator {
+.page-counter {
     display: flex;
-}
-
-.rolling-number-window {
-    position: relative;
-    overflow-y: hidden;
-}
-
-.rolling-number {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-}
-
-.rolling-number.no-animation {
-    transition: none;
-}
-
-.rolling-number-placeholder {
-    width: 0.9rem;
-    height: 2em;
+    flex-direction: row;
 }
 
 .page-counter-numerator {
     display: flex;
 }
 
-.rolling-number {
-    display: flex;
-    flex-direction: column;
+.page-counter-denominator {
+    margin-left: 0.5rem;
 }
 
-.rolling-number {
-    width: 0.9rem;
-    line-height: 2em;
+.page-counter-numerator {
+    display: flex;
 }

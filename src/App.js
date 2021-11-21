@@ -3,7 +3,6 @@ import PageCounter from './components/PageCounter';
 
 const App = () => {
     const [value, setValue] = useState(12);
-    const [counterValue, setCounterValue] = useState(0);
 
     function applyValue() {
         setCounterValue(value);
@@ -18,7 +17,7 @@ const App = () => {
                 type="number"
             />
             <button style={{ zIndex: 1 }} onClick={applyValue}>Click to Change</button>
-            <PageCounter value={value} />
+            <PageCounter value={value} maxValue={99} />
         </div>
     );
 };
